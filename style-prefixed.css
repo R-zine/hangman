@@ -1,0 +1,237 @@
+:root {
+  --font: "Raleway", sans-serif;
+}
+
+body {
+  transition: 1s;
+  background-color: rgba(0, 0, 0, 0.897);
+}
+
+.lost {
+  background-color: rgb(127, 40, 40);
+  transition: 1.5s;
+}
+
+.won {
+  background-color: rgba(170, 170, 91, 0.752);
+}
+
+.text {
+  margin: 20px 120px;
+}
+h1 {
+  color: rgb(172, 101, 101);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Architects Daughter", cursive;
+  text-shadow: 0.3vw 0.1vw black;
+  letter-spacing: 15px;
+  border-bottom: 0.5vh solid black;
+  padding: 4vh 0px;
+  transition-property: letter-spacing;
+  transition-duration: 2s;
+}
+h1:hover {
+  letter-spacing: 20px;
+}
+
+h2 {
+  color: rgb(172, 101, 101);
+  font-size: 5rem;
+  text-shadow: 0.3vw 0.1vh black;
+  font-family: var(--font);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h3 {
+  color: rgb(172, 101, 101);
+  font-size: 4rem;
+  text-shadow: 0.3vw 0.1vh black;
+  font-family: var(--font);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h4 {
+  color: rgb(172, 101, 101);
+  font-size: 2.5rem;
+  text-shadow: 0.2vw 0.1vh black;
+  font-family: var(--font);
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+  size: 75%;
+  padding: 0 1vh;
+  font-size: 9vmin;
+  letter-spacing: 1vmin;
+}
+
+.letters {
+  display: inline-block;
+  justify-content: center;
+  width: 3vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 0.4vh solid black;
+  font-family: var(--font);
+  font-size: 3vw;
+}
+
+.container {
+  display: block;
+  position: relative;
+  margin: auto;
+  margin-bottom: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  padding: 1vh 1vw;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 13px rgba(46, 33, 33, 0.79);
+}
+
+.btn {
+  margin: 4rem;
+  padding: 0.5vh 1vw;
+  text-shadow: 0.2vw 0.1vw black;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: bolder;
+  color: rgb(172, 101, 101);
+  cursor: pointer;
+  border: 0.2vw solid rgb(249, 248, 248);
+  border-radius: 5px;
+  transition: 0.5s;
+  box-shadow: inset 0.5vw 0.5vh 1vh rgba(46, 33, 33, 0.79),
+    inset -0.5vw -0.5vh 1vh rgba(46, 33, 33, 0.79);
+}
+.btn:hover {
+  background-color: rgb(172, 101, 101);
+  color: white;
+  border-color: rgb(251, 247, 247);
+}
+
+#secret {
+  display: inline-flex;
+  position: auto;
+}
+
+button {
+  padding: 5px;
+  margin: 20px;
+  size: 200px;
+  align-items: center;
+  letter-spacing: 1px;
+  color: crimson;
+}
+
+svg {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  padding-top: 2rem;
+  padding-right: 1vw;
+  padding-left: 1vw;
+  transform: scale(180%);
+  color: rgb(172, 101, 101);
+  transition: color 0.5s, width 0.2s, height 0.2s;
+  padding: 1vw;
+}
+
+svg:hover {
+  color: rgb(169, 34, 34);
+  width: 3vmin;
+  height: 3vmin;
+}
+
+.dead {
+  color: rgb(124, 113, 113);
+}
+.keyboard-cont {
+  border-radius: 10px;
+  background-color: rgba(235, 227, 227, 0.887);
+  box-shadow: inset 20px 0 50px rgba(104, 96, 96, 0.964),
+    inset -20px 0 50px rgba(104, 96, 96, 0.964);
+}
+.keyboard {
+  position: relative;
+  margin: 20px;
+  padding: 20px 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: bottom 0.4s;
+}
+
+.hidden {
+  visibility: collapse;
+}
+
+.keyboard__keys {
+  text-align: center;
+  transition: 0.5s;
+}
+
+.keyboard__key {
+  display: inline-flex;
+  height: 45px;
+  width: 6%;
+  max-width: 90px;
+  margin: 3px;
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: white;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  outline: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  transition: 0.5s;
+  box-shadow: inset 2px 0 5px rgba(104, 96, 96, 0.964),
+    inset -2px 0 5px rgba(104, 96, 96, 0.964);
+}
+
+.keyboard__key:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.keyboard__key--activatable::after {
+  content: "";
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(68, 63, 63, 0.935);
+  border-radius: 50%;
+}
+
+.keyboard__key--dark {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.keyboard__key:hover {
+  background: #ccc;
+}
+
+.used {
+  background: rgb(94, 93, 93);
+  color: white;
+  box-shadow: inset 2px 0 5px rgba(220, 204, 204, 0.964),
+    inset -2px 0 5px rgba(220, 204, 204, 0.964);
+  border-color: #000;
+}
